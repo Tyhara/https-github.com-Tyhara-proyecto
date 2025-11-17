@@ -1,0 +1,5 @@
+{
+  "name": "Monedaventura: Finanzas para Niños.v17",
+  "description": "Una aplicación web lúdica y educativa diseñada para enseñar a los niños conceptos financieros básicos a través de una divertida aventura de búsqueda de tesoros. Incluye un modo de 'experto' impulsado por la API de Gemini para responder preguntas financieras complejas.",
+  "requestFramePermissions": []
+}
