@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Monedaventura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Nunito', 'Fredoka', 'sans-serif'],
+              display: ['"Baloo 2"', 'cursive'],
+              game: ['Fredoka', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                light: '#38bdf8',
+                DEFAULT: '#0284c7',
+                dark: '#0c4a6e',
+                accent: '#fbbf24',
+              },
+              grass: {
+                '400': '#4ade80',
+                '500': '#22c55e',
+                '600': '#16a34a',
+              }
+            },
+            boxShadow: {
+              'game': '0px 6px 0px rgba(0,0,0,0.2)',
+            },
+            keyframes: {
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              'bounce-in': {
+                '0%': { opacity: '0', transform: 'scale(0.5)' },
+                '60%': { opacity: '1', transform: 'scale(1.05)' },
+                '100%': { transform: 'scale(1)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            },
+            animation: {
+              wiggle: 'wiggle 2s ease-in-out infinite',
+              'bounce-in': 'bounce-in 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 8s linear infinite',
+              'float': 'float 3s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Nunito', sans-serif;
+        overflow-x: hidden;
+        background-color: #f8fafc;
+      }
+      /* Estilos de Texto Cartoon Responsivo */
+      .title-stroke {
+        -webkit-text-stroke: 4px #451a03; /* Borde más fino para móvil */
+        paint-order: stroke fill;
+        color: #fbbf24; /* Amarillo */
+        text-shadow: 0px 3px 0px rgba(0,0,0,0.2);
+      }
+      
+      @media (min-width: 768px) {
+        .title-stroke {
+          -webkit-text-stroke: 8px #451a03; /* Borde grueso para escritorio */
+          text-shadow: 0px 6px 0px rgba(0,0,0,0.2);
+        }
+      }
+      
+      .subtitle-stroke {
+        -webkit-text-stroke: 3px #451a03;
+        paint-order: stroke fill;
+        color: #ffffff;
+      }
+      
+      @media (min-width: 768px) {
+        .subtitle-stroke {
+          -webkit-text-stroke: 4px #451a03;
+        }
+      }
+
+      .text-stroke-blue {
+        -webkit-text-stroke: 4px #0c4a6e;
+        paint-order: stroke fill;
+        color: #ffffff;
+        text-shadow: 0px 3px 0px rgba(0,0,0,0.2);
+      }
+
+      .text-stroke-yellow {
+        -webkit-text-stroke: 3px #d97706;
+        paint-order: stroke fill;
+        color: #ffffff;
+      }
+      
+      /* Custom Scrollbar Hide */
+      *::-webkit-scrollbar {
+        display: none;
+      }
+      * {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.84.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
